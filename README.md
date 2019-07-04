@@ -2,7 +2,9 @@
 My texmf folder for special LaTeX additions unavailable on TeXLive.
 
 ## Folder structure and creation.
-The folder is organized as follows<a href="#note1" id="note1ref"><sup>1,</sup><a href="#note2" id="note2ref"><sup>2</sup>:
+The folder is organized as follows
+<a href="#note1" id="note1ref"><sup>1,</sup>
+<a href="#note2" id="note2ref"><sup>2</sup>:
 ```
     bibtex directory    This is where bib files and bst files go
     ⁃  bst directory       Put bst files here
