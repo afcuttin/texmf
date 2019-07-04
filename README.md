@@ -2,7 +2,7 @@
 My texmf folder for special LaTeX additions unavailable on TeXLive.
 
 ## Folder structure and creation.
-The folder is organized as follows<sup>[1],(#fn1)</sup><sup>[2](#fn2)</sup>:
+The folder is organized as follows<a href="#note1" id="note1ref"><sup>1,</sup><a href="#note2" id="note2ref"><sup>2</sup>:
 ```
     bibtex directory    This is where bib files and bst files go
     ⁃  bst directory       Put bst files here
@@ -17,7 +17,7 @@ The folder is organized as follows<sup>[1],(#fn1)</sup><sup>[2](#fn2)</sup>:
     doc directory
     ⁃  put documentation files from packages installed in the tex directory here. Putting the documentation files here allows them to be found by the texdocsystem.
 ```
-<a name="fn1">1</a>: https://tex.stackexchange.com/a/8359/177
-
-<a name="fn2">2</a>: https://tex.stackexchange.com/a/1138/177
+<a id="note1" href="#note1ref"><sup>1</sup></a>: https://tex.stackexchange.com/a/8359/177
+<br>
+<a id="note2" href="#note2ref"><sup>2</sup></a>: https://tex.stackexchange.com/a/1138/177
 
