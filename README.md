@@ -22,6 +22,23 @@ The folder is organized as follows
 ```
 
 [This](https://github.com/amunn/make-local-texmf) is a script that can create the directory tree. If `texmf` already exist, it does not do anything. Check the script directory for the modified script and possibly fork the code.
+
+## Custom packages
+
+### circuitikz
+Circuitikz is actively maintained and its version may be ahead of the one available on CTAN.
+
+Therefore, it may be easier to use the [provided](https://circuitikz.github.io/circuitikz/) `circuitikzgit.sty` version.
+Just
+```
+wget http://circuitikz.github.io/circuitikz/circuitikzgit.sty
+```
+directly in `~/texmf/tex/latex/`.
+
+
+
+
+
 <a id="note1" href="#note1ref"><sup>1</sup></a>: https://tex.stackexchange.com/a/8359/177
 <br>
 <a id="note2" href="#note2ref"><sup>2</sup></a>: https://tex.stackexchange.com/a/1138/177
