@@ -17,6 +17,8 @@ The folder is organized as follows<a href="#note1" id="note1ref"><sup>1,</sup><a
     doc directory
     ⁃  put documentation files from packages installed in the tex directory here. Putting the documentation files here allows them to be found by the texdocsystem.
 ```
+
+[This](https://github.com/amunn/make-local-texmf) is a script that can create the directory tree. If `texmf` already exist, it does not do anything. Check the script directory for the modified script and possibly fork the code.
 <a id="note1" href="#note1ref"><sup>1</sup></a>: https://tex.stackexchange.com/a/8359/177
 <br>
 <a id="note2" href="#note2ref"><sup>2</sup></a>: https://tex.stackexchange.com/a/1138/177
