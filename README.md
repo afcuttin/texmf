@@ -10,6 +10,7 @@ The folder is organized as follows
     bibtex directory    This is where bib files and bst files go
     ⁃  bst directory       Put bst files here
     ⁃  bib directory       Put bib files here
+
     tex directory       This is where new packages go
     ⁃  latex directory     Put latex packages here
     ⁃  plain directory     Put plain tex files here
@@ -25,6 +26,12 @@ The folder is organized as follows
 
 ## Custom packages
 
+### europecv2013
+Aggiunto `europecv2013` come submodule, dopo aver fatto il fork dal repository originale:
+```
+git submodule add git@github.com:afcuttin/europecv2013.git
+```
+
 ### circuitikz
 Circuitikz is actively maintained and its version may be ahead of the one available on CTAN.
 
@@ -33,12 +40,14 @@ Just
 ```
 wget http://circuitikz.github.io/circuitikz/circuitikzgit.sty
 ```
-directly in `~/texmf/tex/latex/`.
+in `~/texmf/tex/latex/`
+and
+```
+wget http://circuitikz.github.io/circuitikz/circuitikzmanualgit.pdf
+```
+in `~/texmf/doc`.
 
-
-
-
-
+## References
 <a id="note1" href="#note1ref"><sup>1</sup></a>: https://tex.stackexchange.com/a/8359/177
 <br>
 <a id="note2" href="#note2ref"><sup>2</sup></a>: https://tex.stackexchange.com/a/1138/177
