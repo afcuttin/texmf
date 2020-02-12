@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@gitlab.elettra.eu:alessandro.cuttin/e4ess-layout.git
+	branch = master
+	commit = e4bf307e169191349db01da4a25c306de7aa204a
+	parent = f65b114859c0a80725858312581a5e9b9d687628
+	method = merge
+	cmdver = 0.4.0
