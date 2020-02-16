@@ -1,0 +1,42 @@
+% make available title and author using the class macros
+% \makeatletter
+% 	\let\mytitle\@title
+% 	\let\myauthor\@author
+% \makeatother
+
+\maketitle
+
+\include{con/change-log}
+
+\glsunsetall
+\pdfbookmark[chapter]{\contentsname}{toc}
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Glossaries
+\printglossary[type=\acronymtype,title=List of acronyms]
+\setglossarypreamble[symbols]{%
+	The symbols here listed follow the convention stated in \cite[Sec.~1.1,][]{rfps-tech-spec}.
+	Specifically, given a quantity $X$:\newline
+	\begin{tabularx}{\textwidth}{lX}
+		$X_N$ & denotes the nominal value of $X$; \\
+		$X_m$ & denotes the minimum value of $X$; \\
+		$X_M$ & denotes the maximum (peak) value of $X$; \\
+		$X_{ave}$ & denotes the value of $X$, averaged on a duty cycle of an ideal square pulse with a pulse length of \SI{3.5}{\ms} and \SI{14}{\Hz} repetition rate. \\
+	\end{tabularx}
+	\vspace*{\baselineskip}
+}
+\printglossary[type=symbols,title=List of symbols]
+
+\glsresetall
+
+% Bibliography
+\newrefcontext[labelprefix=TD-]
+\printbibliography[keyword=tendoc,title=Tender Documents]
+
+\newrefcontext[labelprefix=CD-]
+\printbibliography[keyword=condoc,title=Contractor Documents]
+
+\newrefcontext[labelprefix=RD-]
+\printbibliography[notkeyword=tendoc,notkeyword=condoc,title=Reference Documents] % keyword=catb

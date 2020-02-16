@@ -1,0 +1,81 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+% graphics
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% tabular material
+% tabularx and booktabs already loaded in the definition of the ‘req’ environment
+\usepackage{multirow}
+
+% formatting
+\usepackage{mdframed}
+% \usepackage{enumitem}
+% \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{longtable}
+\usepackage{pdflscape}
+
+\usepackage[%
+	shortcuts,
+	% noredefwarn,
+	toc,
+	nomain, %because symbols and acronym options are used
+	symbols,
+	acronym,
+	nonumberlist
+]{glossaries}
+\usepackage{markdown}
+
+% utilities
+\usepackage{xspace}
+\usepackage[obeyFinal]{todonotes}
+% \usepackage{showkeys}
+\usepackage{morewrites} % https://tex.stackexchange.com/a/289964/177
+\usepackage{pdfpages}
+
+% math mode
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\DeclareSIUnit[number-unit-product = {}]
+\degree{\SIUnitSymbolDegree}
+
+% Index creation
+\usepackage{makeidx}
+\usepackage[]{idxlayout}
+
+\usepackage[%
+	sorting       = none,
+	defernumbers  = true,
+	backend       = biber,
+	% bibstyle    = ieee,
+	% % citestyle = numeric,
+	% isbn        = true,
+	% doi         = false,
+	% % url       = false,
+	% bibencoding = utf8,
+]{biblatex}
+
+\usepackage[pdfusetitle,final]{hyperref}
+\hypersetup{
+	% bookmarksopen=true
+	hidelinks,
+	% colorlinks,
+	% pdfinfo={
+	% 	Author={},
+	% 	Subject={},
+	% 	Title={},
+ %   }
+}
+
+% to load after hyperref
+\usepackage[open,openlevel=1]{bookmark}
+
+% for testing pusposes - remove before releasing the document
+% \usepackage{showframe}
+
+% packages to load by last, as recommended by the manual
+\usepackage[noabbrev,capitalise]{cleveref}

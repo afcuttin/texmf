@@ -1,0 +1,31 @@
+% remove vertical space from the enumerate environment in order to have more compact 'req' environments
+
+\newenvironment{enumerate*}%
+  {\begin{enumerate}%
+    \setlength{\itemsep}{1pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{enumerate}}
+
+\usepackage{etoolbox}
+\AfterEndEnvironment{enumerate*}{\vskip-\lastskip}
+
+\newcommand{\provide}[1]{Provide reference to a {#1} report.\xspace} % https://tex.stackexchange.com/a/244111/177
+
+% https://tex.stackexchange.com/a/240754/177
+\makeatletter
+\newcommand{\crossout}[1]{%
+  \begingroup
+  \sbox\z@{#1}%
+  \dimen\z@=\wd\z@
+  \dimen\tw@=\ht\z@
+  \dimen\z@=.99626\dimen\z@   % get big points
+  \dimen\tw@=.99626\dimen\tw@ % get big points
+  \edef\co@wd{\strip@pt\dimen\z@}%  just the number
+  \edef\co@ht{\strip@pt\dimen\tw@}% just the number
+  \leavevmode
+  \rlap{\pdfliteral{q 1 J 0.4 w 0 0 m \co@wd\space \co@ht\space l S Q}}%
+  \rlap{\pdfliteral{q 1 J 0.4 w 0 \co@ht\space m \co@wd\space 0 l S Q}}%
+  #1%
+  \endgroup
+}
+\makeatother
