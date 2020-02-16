@@ -240,3 +240,5 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+/tex/latex/e4esslayout/e4esslayout.sublime-workspace
+/tex/latex/e4esslayout/testdoc.pdf
