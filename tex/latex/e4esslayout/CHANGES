@@ -1,0 +1,16 @@
+## Version 0.1.0
+
+ - git subrepo clone git@gitlab.elettra.eu:alessandro.cuttin/e4ess-layout.git tex/latex/e4esslayout
+ - europecv2013 class
+ - circuitikz (git version) manual
+ - update of bibtex folder
+ - added europecv2013 as submodule
+ - added circuitikzgit to package collection
+ - html fixed
+ - footnotes fixed?
+ - note on script that creates the texmf tree
+ - footnotes fixed
+ - minor edit for footnotes
+ - added description of texmf tree
+ - Initial commit
+
