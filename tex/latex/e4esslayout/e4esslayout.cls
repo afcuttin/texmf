@@ -60,6 +60,38 @@
 \newcommand\@DocumentDate{%
 	\ClassWarning{e4esslayout}{No \noexpand\DocumentDate given}
 }
+\newcommand\DocumentRevision[1]{\renewcommand\@DocumentRevision{#1}}
+\newcommand\@DocumentRevision{%
+	\ClassWarning{e4esslayout}{No \noexpand\DocumentRevision given}
+}
+\newcommand\DocumentStatus[1]{\renewcommand\@DocumentStatus{#1}}
+\newcommand\@DocumentStatus{%
+	\ClassWarning{e4esslayout}{No \noexpand\DocumentStatus given}
+}
+\newcommand\DocumentClassification[1]{\renewcommand\@DocumentClassification{#1}}
+\newcommand\@DocumentClassification{%
+	\ClassWarning{e4esslayout}{No \noexpand\DocumentClassification given}
+}
+
+% page headings commands
+\newcommand{\DocumentDetailsHeading}{
+	\bgroup\renewcommand*{\arraystretch}{.85}
+	% \begin{tabular}{@{} r @{:\ } l @{}}
+	\begin{tabular}{@{} r @{:\ } l @{}}
+		Document type         & \@DocumentType \\
+		Document number       & \@DocumentNumber \\
+		Date                  & \@DocumentDate \\
+		Revision              & \@DocumentRevision \\
+		Status                & \@DocumentStatus \\
+		Confidentiality level & \@DocumentClassification
+	\end{tabular}
+	\egroup
+}
+\newcommand{\LogosInHeading}{
+	\includegraphics[height=47pt]{/home/cuttin/media/logos/elettra/GECI-TMP-9-rev01IT-crop.pdf}
+	\hspace{1em}
+	\includegraphics[height=47pt]{/home/cuttin/media/logos/ess/ESS-logo-cropped.png}
+}
 
 % page headings
 \setkomafont{pagehead}{\scriptsize\sffamily\upshape}
