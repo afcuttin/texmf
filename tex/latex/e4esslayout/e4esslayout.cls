@@ -25,8 +25,11 @@
 	plainfootsepline,
 	% footbotline,
 ]{scrlayer-scrpage}
-\RequirePackage{tabularx} % required by titlepage
-\RequirePackage{booktabs} % required by titlepage
+\RequirePackage{tabularx} % titlepage
+\RequirePackage{booktabs} % titlepage
+\RequirePackage{adjustbox} % titlepage footer
+\RequirePackage{lastpage} % page footer
+\RequirePackage{graphicx} % logos in heading
 
 % Document informations commands
 \newcommand\ApprovedBy[1]{\renewcommand\@ApprovedBy{#1}}
