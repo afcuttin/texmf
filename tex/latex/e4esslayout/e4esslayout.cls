@@ -16,7 +16,19 @@
 	         DIV = 12,
 }
 
-% Document informations
+% Load required packages
+\RequirePackage[%
+	manualmark,
+	headsepline,
+	footsepline,
+	plainheadsepline,
+	plainfootsepline,
+	% footbotline,
+]{scrlayer-scrpage}
+\RequirePackage{tabularx} % required by titlepage
+\RequirePackage{booktabs} % required by titlepage
+
+% Document informations commands
 \newcommand\ApprovedBy[1]{\renewcommand\@ApprovedBy{#1}}
 \newcommand\@ApprovedBy{%
 	\ClassWarning{e4esslayout}{No \noexpand\ApprovedBy name given}
