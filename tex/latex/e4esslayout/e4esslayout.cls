@@ -45,6 +45,24 @@
 \newcommand\@DateChecked{%
 	\ClassWarning{e4esslayout}{No \noexpand\DateChecked given}
 }
+\newcommand\DocumentType[1]{\renewcommand\@DocumentType{#1}}
+\newcommand\@DocumentType{%
+	\ClassWarning{e4esslayout}{No \noexpand\DocumentType given}
+}
+\newcommand\DocumentNumber[1]{\renewcommand\@DocumentNumber{#1}}
+\newcommand\@DocumentNumber{%
+	\ClassWarning{e4esslayout}{No \noexpand\DocumentNumber given}
+}
+\newcommand\DocumentDate[1]{\renewcommand\@DocumentDate{#1}}
+\newcommand\@DocumentDate{%
+	\ClassWarning{e4esslayout}{No \noexpand\DocumentDate given}
+}
+
+% page headings
+\setkomafont{pagehead}{\scriptsize\sffamily\upshape}
+
+
+
 
 % titlepage
 \renewcommand*{\maketitle}{%
