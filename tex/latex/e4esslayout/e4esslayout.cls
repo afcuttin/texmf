@@ -112,6 +112,11 @@
 	\end{adjustbox}
 }
 
+% page headings after titlepage
+\rehead*{\DocumentDetailsHeading}
+\rohead*{\DocumentDetailsHeading}
+\lehead*{\LogosInHeading}
+\lohead*{\LogosInHeading}
 
 % titlepage heading and footer
 \newpairofpagestyles{firstpage}{%
@@ -155,3 +160,7 @@
 		\vspace*{.2\textheight}
 	\end{titlepage}
 }
+
+% set format for page numbers
+\setkomafont{pagenumber}{\small\sffamily\upshape}
+\renewcommand\pagemark{{\usekomafont{pagenumber}\thepage\ of \pageref{LastPage}}}
