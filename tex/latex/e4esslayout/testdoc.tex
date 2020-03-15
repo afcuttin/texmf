@@ -1,16 +1,52 @@
 \documentclass[]{e4esslayout}
 
-\input{set/page-layout}
+\usepackage{gitinfo2}
+
 \input{set/packages}
 \input{set/other-commands-environments}
 
-\title{Test document}
-\subtitle{E4ESS Project -- AIK X.Y}
-\author{NameOf Author}
-\ApprovedBy{NameOf Approver\newline approver2} % \newline for more than one approver
-\DateApproved{dd/mm/yyyy}
-\CheckedBy{NameOf Checker} % \newline for more than one checker
-\DateChecked{dd/mm/yyyy}
+\title{%
+	Test document
+}
+\subtitle{%
+	E4ESS Project -- AIK X.Y
+}
+\author{%
+	NameOf Author
+}
+\ApprovedBy{% \newline for more than one approver
+	NameOf Approver\newline approver2
+}
+\DateApproved{%
+	dd/mm/yyyy
+}
+\CheckedBy{%
+	NameOf Checker
+}
+\DateChecked{%
+	dd/mm/yyyy
+}
+\DocumentType{
+	Insert document type here
+}
+\DocumentNumber{
+	Insert document number here
+}
+% some document details can be set by means of other packages. For example, gitinfo2 if one uses git to keep track of the document.
+\DocumentDate{
+	\today
+}
+\DocumentRevision{
+	\gitTags
+}
+\DocumentStatus{
+	In process
+}
+\DocumentClassification{
+	Top Secret
+}
+
+
 
 \begin{document}
 
@@ -18,5 +54,9 @@
 
 % frontmatter
 \input{con/frontmatter}
+
+\chapter{first}
+
+Lorem Ipsum dolor sit amet
 
 \end{document}
