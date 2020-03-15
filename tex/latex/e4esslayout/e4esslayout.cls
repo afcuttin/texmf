@@ -93,11 +93,34 @@
 	\includegraphics[height=47pt]{/home/cuttin/media/logos/ess/ESS-logo-cropped.png}
 }
 
-% page headings
 \setkomafont{pagehead}{\scriptsize\sffamily\upshape}
 
+% page footer command
+\newcommand{\FirstPageFooter}{
+	\scriptsize\sffamily\upshape
+	\textbf{Elettra Sincrotrone Trieste S.C.p.A}\\%
+	\begin{adjustbox}{max width=\textwidth}
+		\bgroup\renewcommand*{\arraystretch}{.87} % set footheight=50pt in the documentclass options
+			% \small
+			\begin{tabular}{@{} l | l | l | l @{}}
+			S.S. 14 Km 163,5 in Area Science Park & P.IVA e C.F. IT00697920320                     & Iscritta al registro delle imprese di Trieste & Organizzazione con sistema \\
+			34149 Basovizza, Trieste, Italy       & Cap. Soc. E 47.632.663,00 i.v.                 & Società di interesse nazionale                & di gestione ISO 9001 e \\
+			T. +39 040 37581                      & PEC: sinctrotrone.trieste.elettra@legalmail.it & ai sensi dell'art. 10, comma 4,               & OHSAS 18001 certificato da \\
+			F. +39 040 938 0903                   & www.elettra.eu                                 & L. 19 ottobre 1999 n.370                      & Bureau Veritas Italia S.p.A \\
+			\end{tabular}
+		\egroup
+	\end{adjustbox}
+}
 
 
+% titlepage heading and footer
+\newpairofpagestyles{firstpage}{%
+	\ihead{\LogosInHeading}
+	\ohead{\DocumentDetailsHeading}
+	\ifoot{\FirstPageFooter}
+	\cfoot{}
+	\ofoot{}
+}
 
 % titlepage
 \renewcommand*{\maketitle}{%
