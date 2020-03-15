@@ -1,3 +1,24 @@
+## Version 0.2.0:
+
+ - git subrepo push tex/latex/e4esslayout
+ - page-layout file no longer needed (content moved to cls file)
+ - test document update
+ - normal page style
+ - titlepage style
+ - added document details commands and heading commands
+ - added required packages
+ - added commands for document details
+ - git subrepo push tex/latex/e4esslayout
+ - added packages for titlepage
+ - added sublime-project file
+ - git subrepo clone git@github.com:afcuttin/europecv2013.git tex/latex/europecv2013
+ - removing europecv2013 folder to add it as a subrepo
+ - git subrepo push tex/latex/e4esslayout
+ - auxiliary files
+ - added test document
+ - titlepage and commands for document details
+ - git subrepo push tex/latex/e4esslayout
+
 ## Version 0.1.0
 
  - git subrepo clone git@gitlab.elettra.eu:alessandro.cuttin/e4ess-layout.git tex/latex/e4esslayout
