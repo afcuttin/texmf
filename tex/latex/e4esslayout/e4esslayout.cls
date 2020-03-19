@@ -7,7 +7,6 @@
 	  headheight = 53.3pt,
 	  footheight = 50.1pt,
 	   titlepage = firstiscover,
-	     % draft = true,
 	overfullrule = true,
 	         toc = listof,
 	 headsepline = true,
@@ -164,3 +163,10 @@
 % set format for page numbers
 \setkomafont{pagenumber}{\small\sffamily\upshape}
 \renewcommand\pagemark{{\usekomafont{pagenumber}\thepage\ of \pageref{LastPage}}}
+
+% Font
+% Palatino for rm and math | Helvetica for ss | Courier for tt
+\usepackage[]{mathpazo} % math & rm
+\linespread{1.1}        % Palatino needs more leading (space between lines)
+\usepackage[scaled]{helvet} % ss
+\usepackage{courier} % tt
