@@ -166,7 +166,7 @@
 
 % Font
 % Palatino for rm and math | Helvetica for ss | Courier for tt
-\usepackage[]{mathpazo} % math & rm
+\RequirePackage{mathpazo} % math & rm
 \linespread{1.1}        % Palatino needs more leading (space between lines)
-\usepackage[scaled]{helvet} % ss
-\usepackage{courier} % tt
+\RequirePackage[scaled]{helvet} % ss
+\RequirePackage{courier} % tt
