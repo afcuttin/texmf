@@ -5,7 +5,7 @@
 
 \KOMAoptions{%
 	  headheight = 53.3pt,
-	  footheight = 50.1pt,
+	  footheight = 56.14pt,
 	   titlepage = firstiscover,
 	overfullrule = true,
 	         toc = listof,
