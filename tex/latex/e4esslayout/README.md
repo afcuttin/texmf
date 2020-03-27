@@ -22,3 +22,4 @@ LaTeX package providing the layout defined for the E4ESS  project
                 }
 	}
 1. using `subrepo`, clone into a separate folder the repository containing auxiliary files (bibliographies and glossaries)
+1. copy the `.gitignore` file from https://github.com/afcuttin/gitignore directory into the working directory of the document just created
