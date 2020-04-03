@@ -48,6 +48,7 @@
 \RequirePackage{adjustbox} % titlepage footer
 \RequirePackage{lastpage} % page footer
 \RequirePackage{graphicx} % logos in heading
+\RequirePackage{amsmath}
 
 % Document informations commands
 \newcommand\ApprovedBy[1]{\renewcommand\@ApprovedBy{#1}}
@@ -262,3 +263,6 @@
 	% 	Title={},
  %   }
 }
+
+\RequirePackage[open,openlevel=1]{bookmark} % to load after hyperref
+\RequirePackage[noabbrev]{cleveref} % packages to load by last, as recommended by the manual

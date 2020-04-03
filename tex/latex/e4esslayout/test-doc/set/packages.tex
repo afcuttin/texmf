@@ -24,11 +24,9 @@
 % utilities
 \usepackage{xspace}
 \usepackage[obeyFinal]{todonotes}
-% \usepackage{showkeys}
-\usepackage{morewrites} % https://tex.stackexchange.com/a/289964/177
 
 % math mode
-\usepackage{amsmath,amssymb}
+\usepackage{amssymb}
 \usepackage{siunitx}
 \DeclareSIUnit[number-unit-product = {}]
 \degree{\SIUnitSymbolDegree}
@@ -49,23 +47,5 @@
 	% bibencoding = utf8,
 ]{biblatex}
 
-\usepackage[pdfusetitle,final]{hyperref}
-\hypersetup{
-	% bookmarksopen=true
-	hidelinks,
-	% colorlinks,
-	% pdfinfo={
-	% 	Author={},
-	% 	Subject={},
-	% 	Title={},
- %   }
-}
-
-% to load after hyperref
-\usepackage[open,openlevel=1]{bookmark}
-
 % for testing pusposes - remove before releasing the document
 % \usepackage{showframe}
-
-% packages to load by last, as recommended by the manual
-\usepackage[noabbrev]{cleveref}
