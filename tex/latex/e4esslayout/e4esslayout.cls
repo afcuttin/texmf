@@ -238,3 +238,27 @@
 % 		}%
 % 	}%
 % }
+
+\RequirePackage[figure,table]{totalcount}
+\newcommand{\AutoHideLoF}{
+	\iftotalfigures
+	  \listoffigures
+	\fi
+}
+\newcommand{\AutoHideLoT}{
+	\iftotaltables
+	  \listoftables
+	\fi
+}
+
+\RequirePackage[pdfusetitle,final]{hyperref}
+\hypersetup{
+	% bookmarksopen=true
+	hidelinks,
+	% colorlinks,
+	% pdfinfo={
+	% 	Author={},
+	% 	Subject={},
+	% 	Title={},
+ %   }
+}
