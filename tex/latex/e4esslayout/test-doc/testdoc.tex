@@ -43,23 +43,47 @@
 	\today
 }
 \DocumentRevision{
-	\gitTags
+	x.y.z %\gitTags
 }
 \DocumentStatus{
 	In process
 }
 \DocumentClassification{
-	Top Secret
+	Confidential
 }
 
 % \makeglossaries
-
+\listfiles
 \begin{document}
 
-\raggedbottom
+% \raggedbottom
 
 % frontmatter
-\input{con/frontmatter}
+\include{con/frontmatter}
+
+\section{\texttt{e4esslayout} document class}
+\label{sec:declaration}
+This document is the template of the \texttt{e4esslayout}, version \input{VERSION}.
+
+\section{Class options}
+\label{sec:cla-opt}
+This class is based on \textsf{KOMA - Script} classes.
+It is possible to choose which \textsf{KOMA} class to load by specifying one of the options specified in \cref{tab:doc-opt}.
+\begin{table}[b]
+	\centering
+	\caption{Documentclass options and corresponding \textsf{KOMA} classes.}
+	\label{tab:doc-opt}
+	\begin{tabular}{cc}
+	\toprule
+	\texttt{e4esslayout} option & \textsf{KOMA} loaded class \\
+	\toprule
+	article & scrartcl \\
+	book    & scrbook \\
+	report  & scrreprt \\
+	letter  & scrlttr2 \\
+	\bottomrule
+	\end{tabular}
+\end{table}
 
 \section{Loaded packages}
 \label{sec:loa-pac}
