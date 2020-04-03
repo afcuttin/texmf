@@ -189,3 +189,52 @@
 \linespread{1.1}        % Palatino needs more leading (space between lines)
 \RequirePackage[scaled]{helvet} % ss
 \RequirePackage{courier} % tt
+
+% Define change log section
+\newcommand\changelogname{Change Log}
+\@ifundefined{chapter}{%
+	% code for article (no chapter defined)
+	\newcommand\changelog{%
+		\section*{\changelogname}
+		\addcontentsline{toc}{section}{\changelogname}
+	}
+}{%
+	% code for book
+	\newcommand\changelog{%
+		\chapter*{\changelogname}
+		\addcontentsline{toc}{chapter}{\changelogname}
+	}
+}
+
+% % other ways to define the same thing
+% \ifdefined\chapter
+% 	\newcommand\changelog{\chapter*{\changelogname}}
+% 	\addcontentsline{toc}{chapter}{\changelogname}
+% \else
+% 	\newcommand\changelog{\section*{\changelogname}}
+% 	\addcontentsline{toc}{section}{\changelogname}
+% \fi
+
+% \@ifclassloaded{scrbook}{%
+% 	% code for scrbook
+% 	\newcommand{\changelog}{\chapter*{\changelogname}
+% 	\addcontentsline{toc}{chapter}{\changelogname}
+% }{% else clause
+% 	\@ifclassloaded{scrartcl}{%
+% 		% code for scrartcl
+% 		\newcommand\changelog{\section*{\changelogname}}
+% 		\addcontentsline{toc}{section}{\changelogname}
+% 	}{%
+% 	% else clause
+% 		\@ifclassloaded{scrreprt}{%
+% 		% code for scrreprt
+% 		}{%
+% 		% else clause
+% 			\@ifclassloaded{scrlttr2}{%
+% 			% code for scrlttr2
+% 			}{%
+% 			% else clause
+% 			}%
+% 		}%
+% 	}%
+% }
