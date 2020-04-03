@@ -1,3 +1,34 @@
+## Version 1.0.0:
+
+ - sublime project and git hooks
+ - update of document template and documentation
+ - moved packages from document template to class file
+ - added commands for auto-hide \listof{tables,figures}
+ - change log heading behaves according to the selected class
+ - koma classes can be called by means of documentclass option
+ - git subrepo push tex/latex/e4esslayout
+ - remove cleveref capitalise option
+ - add info about git hooks and their folder
+ - git subrepo push tex/latex/e4esslayout
+ - updated readme with gitignore
+ - git subrepo push tex/latex/e4esslayout
+ - updated gitignore
+ - added procedure to open a new document
+ - added missing change log file
+ - added makeglossaries command
+ - git subrepo push tex/latex/e4esslayout
+ - test document moved to its own directory
+ - git subrepo push tex/latex/e4esslayout
+ - corrected footheight (footheight too low warning)
+ - git subrepo push tex/latex/e4esslayout
+ - improved bibliography management
+ - git subrepo push tex/latex/e4esslayout
+ - removed unnecessary packages for test document
+ - requirepackage instead of usepackage
+ - git subrepo push tex/latex/e4esslayout
+ - added palatino font
+ - git subrepo push tex/latex/e4esslayout
+
 ## Version 0.2.0:
 
  - git subrepo push tex/latex/e4esslayout
