@@ -1,9 +1,28 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{e4esslayout}[2020/02/12 E4ESS document layout]
 
-\LoadClass[]{scrbook}
+\RequirePackage{xkeyval} % for option processing
 
-\KOMAoptions{%
+\def\KomaClassToLoad{scrbook} % default class is book
+
+\DeclareOptionX{article}{%
+    \gdef\KomaClassToLoad{scrartcl}}
+\DeclareOptionX{report}{%
+    \gdef\KomaClassToLoad{scrreprt}}
+\DeclareOptionX{book}{%
+    \gdef\KomaClassToLoad{scrbook}}
+\DeclareOptionX{letter}{%
+    \gdef\KomaClassToLoad{scrlttr2}}
+
+%:pass unrecognised options off to \KomaClassToLoad
+\DeclareOptionX*{%
+    \PassOptionsToClass{\CurrentOption}{\KomaClassToLoad}}
+%:process options
+\ProcessOptionsX
+%:load \KomaClassToLoad
+\LoadClass{\KomaClassToLoad}% add options if desired
+
+\KOMAoptions{% a4paper is the default for all Koma classes
 	  headheight = 53.3pt,
 	  footheight = 56.14pt,
 	   titlepage = firstiscover,
