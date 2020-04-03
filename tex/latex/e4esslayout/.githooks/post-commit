@@ -1,0 +1,53 @@
+#!/bin/sh
+# Copyright 2015 Brent Longborough
+# Part of gitinfo2 package Version 2
+# Release 2.0.7 2015-11-22
+# Please read gitinfo2.pdf for licencing and other details
+# -----------------------------------------------------
+# Post-{commit,checkout,merge} hook for the gitinfo2 package
+#
+# Get the first tag found in the history from the current HEAD
+FIRSTTAG=$(git describe --tags --always --dirty='-*' 2>/dev/null)
+# Get the first tag in history that looks like a Release
+# RELTAG=$(git describe --tags --long --always --dirty='-*' --match '[0-9]*.*' 2>/dev/null)
+RELTAG=$(git describe --tags --always --match 'v*' 2>/dev/null)
+# Hoover up the metadata
+git --no-pager log -1 --date=short --decorate=short \
+    --pretty=format:"\usepackage[%
+        shash={%h},
+        lhash={%H},
+        authname={%an},
+        authemail={%ae},
+        authsdate={%ad},
+        authidate={%ai},
+        authudate={%at},
+        commname={%cn},
+        commemail={%ce},
+        commsdate={%cd},
+        commidate={%ci},
+        commudate={%ct},
+        refnames={%d},
+        firsttagdescribe={$FIRSTTAG},
+        reltag={$RELTAG}
+    ]{gitexinfo}" HEAD > .git/gitHeadInfo.gin
+
+
+# Log commit messages as a 'highlight' in RescueTime Premium
+#
+# To enable this hook:
+#
+# 1. Place this file in your project's .git/hooks directory and make sure its name is "post-commit".
+# 2. Make sure it has executable permissions (chmod +x post-commit)
+# 3. All commits will be automatically logged as highlight events.
+#
+
+API_KEY=B63NtpMM29Dr2QUzq7Y7TLg4OVS_TQrjHSL7PgfI
+
+# REQUIRED FIELDS - Today's date and commit message
+MESSAGE=$(git log -1 HEAD --pretty=format:%s)
+DATE_TODAY=$(date +"%Y-%m-%d %H:%M:%S")
+
+# OPTIONAL - Label
+LABEL='code commit'
+
+  curl --data "key=$API_KEY&highlight_date=$DATE_TODAY&description=$MESSAGE&source=$LABEL" https://www.rescuetime.com/anapi/highlights_post
