@@ -265,3 +265,5 @@
 
 \RequirePackage[open,openlevel=1]{bookmark} % to load after hyperref
 \RequirePackage[noabbrev]{cleveref} % packages to load by last, as recommended by the manual
+
+\newcommand{\otoprule}{\midrule[\heavyrulewidth]} % vertically centered with respect to the row above and below, but same thickness as \{top,bottom}rule
