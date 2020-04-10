@@ -25,7 +25,6 @@
 \KOMAoptions{% a4paper is the default for all Koma classes
 	  headheight = 53.3pt,
 	  footheight = 56.14pt,
-	   titlepage = firstiscover,
 	overfullrule = true,
 	         toc = listof,
 	 headsepline = true,
