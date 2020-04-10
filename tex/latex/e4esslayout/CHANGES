@@ -1,3 +1,10 @@
+## Version 1.1.0:
+
+ - git subrepo push tex/latex/e4esslayout
+ - add \otoprule command
+ - remove titlepage option
+ - git subrepo push tex/latex/e4esslayout
+
 ## Version 1.0.0:
 
  - sublime project and git hooks
