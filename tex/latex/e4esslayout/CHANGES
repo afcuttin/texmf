@@ -1,3 +1,11 @@
+## Version 1.2.0:
+
+ - git subrepo push tex/latex/e4esslayout
+ - added option to print semantic versioning description (or not)
+ - git subrepo push tex/latex/e4esslayout
+ - added chnglog environment based on xltabular
+ - git subrepo push tex/latex/e4esslayout
+
 ## Version 1.1.0:
 
  - git subrepo push tex/latex/e4esslayout
