@@ -272,20 +272,25 @@
 \RequirePackage{xltabular}
 \RequirePackage{environ}
 
-\NewEnviron{chnglog}{%
+\NewEnviron{chnglog}[1][\@nil]{%
 	\changelog
-	This document is versioned following the semantic versioning for documents\footnote{\url{https://semverdoc.org/}} approach.
-	For a given version increment $M.m.p$
-	\begin{itemize}
-		\setlength{\itemsep}{0pt}
-	    \setlength{\parskip}{0pt}
-	    \setlength{\parsep}{0pt}
-		\item[$M$] denotes a \emph{major} release of the document, containing significant changes;
-		\item[$m$] denotes a \emph{minor} version, when information has been added or removed;
-		\item[$p$] denotes a \emph{patch}, when minor changes are made (like fixing typos or layout).
-	\end{itemize}
-	% Increase of a counter resets the rightmost one(s).
-	% \\[\baselineskip]
+	\def\tmp{#1}%
+	\ifx\tmp\@nnil
+		% no argument - no semantic versioning description
+	\else
+		% argument #1 (can be anything) - add semantic versioning description
+		Changes are tracked following the semantic versioning for documents\footnote{\url{https://semverdoc.org/}} approach.
+		For a given version increment $M.m.p$
+		\begin{itemize}
+			\setlength{\itemsep}{0pt}
+		    \setlength{\parskip}{0pt}
+		    \setlength{\parsep}{0pt}
+			\item[$M$] denotes a \emph{major} release of the document, containing significant changes;
+			\item[$m$] denotes a \emph{minor} version, when information has been added or removed;
+			\item[$p$] denotes a \emph{patch}, when minor changes are made (like fixing typos or layout).
+		\end{itemize}
+		% Increase of a counter resets the rightmost one(s).
+	\fi
 	\noindent
 	\begin{xltabular}{\textwidth}{@{}clX@{}}
 	% \caption{}\\
