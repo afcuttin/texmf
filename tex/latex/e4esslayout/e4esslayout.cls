@@ -267,3 +267,40 @@
 \RequirePackage[noabbrev]{cleveref} % packages to load by last, as recommended by the manual
 
 \newcommand{\otoprule}{\midrule[\heavyrulewidth]} % vertically centered with respect to the row above and below, but same thickness as \{top,bottom}rule
+
+% Change log environment
+\RequirePackage{xltabular}
+\RequirePackage{environ}
+
+\NewEnviron{chnglog}{%
+	\changelog
+	This document is versioned following the semantic versioning for documents\footnote{\url{https://semverdoc.org/}} approach.
+	For a given version increment $M.m.p$
+	\begin{itemize}
+		\setlength{\itemsep}{0pt}
+	    \setlength{\parskip}{0pt}
+	    \setlength{\parsep}{0pt}
+		\item[$M$] denotes a \emph{major} release of the document, containing significant changes;
+		\item[$m$] denotes a \emph{minor} version, when information has been added or removed;
+		\item[$p$] denotes a \emph{patch}, when minor changes are made (like fixing typos or layout).
+	\end{itemize}
+	% Increase of a counter resets the rightmost one(s).
+	% \\[\baselineskip]
+	\noindent
+	\begin{xltabular}{\textwidth}{@{}clX@{}}
+	% \caption{}\\
+	\toprule
+	\textbf{Version} & \textbf{Date} & \textbf{Modification}\\
+	\otoprule
+	\endfirsthead
+	\toprule
+	\textbf{Version} & \textbf{Date} & \textbf{Modification}\\
+	\otoprule
+	\endhead
+	% \bottomrule
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	\BODY
+	\end{xltabular}
+}
