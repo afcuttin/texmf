@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@gitlab.elettra.eu:alessandro.cuttin/e4ess-layout.git
 	branch = master
-	commit = 213aaae469f82f6b356171f898911540a4c0ba7f
-	parent = aaccb21d3a28a2dd2a8f4bc0c458eb8cd6058238
+	commit = 47ef304fc4e9ea0ee3df4d7a0a4a60874c8a30a7
+	parent = ac7f47752020e34c2f4e4d49acc958a70382799b
 	method = merge
 	cmdver = 0.4.0
