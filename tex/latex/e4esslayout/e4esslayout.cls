@@ -151,19 +151,22 @@
 		\thispagestyle{firstpage}
 		\sffamily
 		\vspace*{.3\textheight}
-		\noindent{
+		\noindent{%
 			\Huge
 			\itshape
 			\bfseries
 			\@title
-		}\\[-.3\baselineskip]
+			\par
+		}
+		\vspace*{\baselineskip}
 		{\hrule height .9pt}
-		\vspace{2\baselineskip}
-		\noindent{
+		\vspace{1\baselineskip}
+		\noindent{%
 			\itshape
 			\Large
 			\@subtitle
-		}\\[2\baselineskip]
+			\par
+		}
 		\vfill
 		\begin{center}
 			\small
