@@ -1,3 +1,10 @@
+## Version 1.3.0:
+
+ - git subrepo push tex/latex/e4esslayout
+ - test document update
+ - changelog update
+ - git subrepo push tex/latex/e4esslayout
+
 ## Version 1.2.0:
 
  - git subrepo push tex/latex/e4esslayout
