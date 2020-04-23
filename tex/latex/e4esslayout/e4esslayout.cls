@@ -303,9 +303,11 @@
 	\otoprule
 	\endhead
 	% \bottomrule
+	\multicolumn{3}{r}{\scriptsize Continued on the next page} \\
 	\endfoot
 	\bottomrule
 	\endlastfoot
 	\BODY
 	\end{xltabular}
+	\clearpage
 }
