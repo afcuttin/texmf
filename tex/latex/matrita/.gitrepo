@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:afcuttin/matrita.git
 	branch = master
-	commit = d6d4d0558881136cdf5feb4e150396cd46c4f28d
-	parent = 6b95d3a9e6a572fdb65d02c7be69424105e86017
+	commit = 8e23ea704479b42ec2e5d4ca7744dab3cab7c6ed
+	parent = 79acbc3d9e91d9cfa8fb9810bd99988efd16faa7
 	method = merge
 	cmdver = 0.4.0
