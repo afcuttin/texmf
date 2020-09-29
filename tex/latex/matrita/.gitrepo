@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:afcuttin/matrita.git
+	branch = master
+	commit = d6d4d0558881136cdf5feb4e150396cd46c4f28d
+	parent = 6b95d3a9e6a572fdb65d02c7be69424105e86017
+	method = merge
+	cmdver = 0.4.0
