@@ -8,31 +8,36 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{texMemo}[2010/07/31 - Simple Memo Class, Including Logo]
 \RequirePackage{palatino}
+\linespread{1.1}        % Palatino needs more leading (space between lines)
 
 % Load the Base Class
-\LoadClassWithOptions{article}
+\LoadClassWithOptions{scrartcl}
 
 % Begin Requirements
 \RequirePackage{ifthen}
+\RequirePackage{calc}
+\RequirePackage{enumitem}
+\SetLabelAlign{parright}{\strut\smash{\parbox[t]{\labelwidth}{\raggedleft#1}}} % https://tex.stackexchange.com/a/360200/177
+
 
 % Specialized memo Commands (To, From, Subject, Logo, Letterhead Address)
 
-\def\@memoto{\relax}
+\newcommand\@memoto{\relax}
 \newcommand{\memoto}[1]{\gdef\@memoto{#1}}
 
-\def\@memofrom{\relax}
+\newcommand\@memofrom{\relax}
 \newcommand{\memofrom}[1]{\gdef\@memofrom{#1}}
 
-\def\@memosubject{\relax}
+\newcommand\@memosubject{\relax}
 \newcommand{\memosubject}[1]{\gdef\@memosubject{#1}}
 
-\def\@memodate{\relax}
+\newcommand\@memodate{\relax}
 \newcommand{\memodate}[1]{\gdef\@memodate{#1}}
 
-\def\@memologo{\relax}
+\newcommand\@memologo{\relax}
 \newcommand{\logo}[1]{\gdef\@memologo{\protect #1}}
 
-\def\@letterheadaddress{\relax}
+\newcommand\@letterheadaddress{\relax}
 \newcommand{\lhaddress}[1]{\gdef\@letterheadaddress{#1}}
 
 % Custom Document Formatting
@@ -52,16 +57,20 @@
 	\ifthenelse{\equal{\@memologo}{\relax}}{}
 	{ % Create With Logo
 	\begin{minipage}[t]{1\columnwidth}%
-		\begin{flushright}
+		\begin{center}
 			\vspace{-0.6in}
 			\@memologo
 			\vspace{0.5in}
-		\par\end{flushright}%
+		\par\end{center}%
 	\end{minipage}
 	}
 	
 	% To, From, Subject Block
-	\begin{description}
+	\begin{description}[%
+			align=parright,
+			leftmargin=!,
+			labelwidth=\widthof{{\bfseries\sffamily Subject:}}, % https://tex.stackexchange.com/a/37294/177
+		]
 		\ifthenelse{\equal{\@memoto}{\relax}}{}{\item [{To:}] \@memoto}
 		\ifthenelse{\equal{\@memofrom}{\relax}}{}{\item [{From:}] \@memofrom}
 		\ifthenelse{\equal{\@memosubject}{\relax}}{}{\item [{Subject:}] \@memosubject}
