@@ -106,9 +106,9 @@
 	\egroup
 }
 \newcommand{\LogosInHeading}{
-	\includegraphics[height=47pt]{/home/cuttin/media/logos/elettra/GECI-TMP-9-rev01IT-crop.pdf}
+	\includegraphics[height=47pt]{GECI-TMP-9-rev01IT-crop.pdf}
 	\hspace{1em}
-	\includegraphics[height=47pt]{/home/cuttin/media/logos/ess/ESS-logo-cropped.png}
+	\includegraphics[height=47pt]{ESS-logo-cropped.png}
 }
 
 \setkomafont{pagehead}{\scriptsize\sffamily\upshape}
