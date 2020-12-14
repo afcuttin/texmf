@@ -45,7 +45,6 @@
 \RequirePackage{tabularx} % titlepage
 \RequirePackage{booktabs} % titlepage
 \RequirePackage{adjustbox} % titlepage footer
-\RequirePackage{lastpage} % page footer
 \RequirePackage{graphicx} % logos in heading
 \RequirePackage{amsmath}
 
