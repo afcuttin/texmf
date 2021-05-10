@@ -44,6 +44,7 @@
 ]{scrlayer-scrpage}
 \RequirePackage{tabularx} % titlepage
 \RequirePackage{booktabs} % titlepage
+\RequirePackage{xparse}
 \RequirePackage{adjustbox} % titlepage footer
 \RequirePackage{graphicx} % logos in heading
 \RequirePackage{amsmath}
@@ -313,3 +314,5 @@
 	\end{xltabular}
 	\clearpage
 }
+\NewDocumentCommand{\signal}{m}{\textsf{#1}}
+\NewDocumentCommand{\hmibutton}{m}{\textsf{\textsc{#1}}}

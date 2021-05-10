@@ -8,7 +8,7 @@
 	"settings":
 	{
 		"TEXroot": "./test-doc/testdoc.tex",
-        "tex_file_exts": [".tex", ".tikz"],
+        "tex_file_exts": [".tex", ".tikz", ".cls"],
         "builder_settings": {
                     // "options": "--shell-escape"
                 }
