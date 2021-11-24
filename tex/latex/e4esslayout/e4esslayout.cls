@@ -13,6 +13,8 @@
     \gdef\KomaClassToLoad{scrbook}}
 \DeclareOptionX{letter}{%
     \gdef\KomaClassToLoad{scrlttr2}}
+\newif\ifnoesslogo
+\DeclareOptionX{noesslogo}{\noesslogotrue}
 
 %:pass unrecognised options off to \KomaClassToLoad
 \DeclareOptionX*{%
@@ -107,8 +109,12 @@
 }
 \newcommand{\LogosInHeading}{
 	\includegraphics[height=47pt]{GECI-TMP-9-rev01IT-crop.pdf}
-	\hspace{1em}
-	\includegraphics[height=47pt]{ESS-logo-cropped.png}
+	\ifnoesslogo
+		% Elettra logo only
+	\else
+		\hspace{1em}
+		\includegraphics[height=47pt]{ESS-logo-cropped.png}
+	\fi
 }
 
 \setkomafont{pagehead}{\scriptsize\sffamily\upshape}
